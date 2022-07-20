@@ -1,7 +1,6 @@
-from genericpath import exists
-from re import L
 import yaml
 import os
+import json
 
 def read_yaml(path_to_yaml: str)-> dict:
     with open(path_to_yaml) as yaml_file:
@@ -16,4 +15,9 @@ def create_directory(dirs: list):
 
 def save_data_local(data, data_path, index_status = False):
     data.to_csv(data_path, index= index_status)
+
+def save_report(report: dict, report_path: str, indentation= 4):
+    with open(report_path, "w") as f:
+        json.dump(report,f,indent = indentation)
     
+    print(f"report created at {report_path}")

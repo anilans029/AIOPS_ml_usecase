@@ -11,3 +11,6 @@ artifacts:
 
   trained_model_dir : trained_model_dir
   trained_model_filename: ElasticNet.model
+
+  report_dir: report_dir
+  report_file: report.json
