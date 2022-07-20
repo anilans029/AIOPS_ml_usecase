@@ -1,3 +1,5 @@
+from genericpath import exists
+from re import L
 import yaml
 import os
 
@@ -6,3 +8,8 @@ def read_yaml(path_to_yaml: str)-> dict:
         content = yaml.safe_load(yaml_file)
 
     return content
+
+def create_directory(dirs: list):
+    for dir in dirs:
+        os.makedirs(dir, exist_ok=True)
+        print(f"directory created at {dir}")
