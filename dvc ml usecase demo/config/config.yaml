@@ -4,3 +4,7 @@ artifacts:
   artifacts_dir: artifacts
   raw_local_dir: raw_local_dir
   raw_local_fie: data.csv
+
+  split_data_dir: split_data_dir
+  test_data_file: test_data.csv
+  train_data_file: train_data.csv
